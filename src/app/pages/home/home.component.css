@@ -1,0 +1,40 @@
+.carousel-item img {
+    object-fit: cover;
+    height: 400px;
+  }
+  
+  .card {
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card-img-top {
+    border-bottom: 2px solid #dee2e6;
+  }
+  
+  .card-body {
+    text-align: center;
+  }
+  
+  .btn-primary {
+    border-radius: 20px;
+    padding: 10px 20px;
+  }
+  
+  footer {
+    background-color: #343a40;
+    position: relative;
+    width: 100%;
+  }
+  
+  footer a {
+    text-decoration: none;
+    color: #f8f9fa;
+  }
+  

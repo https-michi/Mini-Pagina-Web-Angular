@@ -1,0 +1,19 @@
+@if (loading) {
+    <div class="loading-container">
+      <img src="..\..\..\assets\icons8-hilandero.gif" alt="Cargando..." />
+    </div>
+  } @else {
+    <div class="container mt-5">
+      <div class="d-flex justify-content-center align-items-center min-vh-100">
+        <div class="card">
+          <img src="{{product?.image}}" class="card-img-top" alt="{{product?.title}}">
+          <div class="card-body">
+            <h5 class="card-title">{{product?.title}}</h5>
+            <h4 class="card-price">{{product?.price | currency}}</h4>
+            <p class="card-text">{{product?.description}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  }
+  

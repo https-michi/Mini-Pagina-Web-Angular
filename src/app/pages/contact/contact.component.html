@@ -1,0 +1,31 @@
+<div class="container d-flex justify-content-center align-items-center min-vh-100">
+    <div class="card p-4 shadow-sm" style="max-width: 600px; width: 100%;">
+        <form [formGroup]="contactForm" class="row g-3 needs-validation" novalidate (submit)="enviar($event)">
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="nombre@ejemplo.com" formControlName="email"
+                    [ngClass]="{'is-invalid' : hasErrors('email', 'required') || hasErrors('email', 'email')}">
+                @if (hasErrors('email', 'required')) {
+                <span class="text-danger">Complete el campo</span>
+                }
+                @if (hasErrors('email', 'email')) {
+                <span class="text-danger">Email inválido</span>
+                }
+            </div>
+            <div class="mb-3">
+                <label for="message" class="form-label">Mensaje</label>
+                <textarea class="form-control" id="message" rows="5" formControlName="message"
+                    [ngClass]="{'is-invalid' : hasErrors('message', 'required') || hasErrors('message', 'minlength')}"></textarea>
+                @if (hasErrors('message', 'required')) {
+                <span class="text-danger">Complete el campo</span>
+                }
+                @if (hasErrors('message', 'minlength')) {
+                <span class="text-danger">El mensaje debe contener más de 10 caracteres</span>
+                }
+            </div>
+            <div class="col-12">
+                <button class="btn btn-primary" type="submit">Enviar</button>
+            </div>
+        </form>
+    </div>
+</div>
